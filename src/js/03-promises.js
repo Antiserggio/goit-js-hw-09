@@ -30,11 +30,11 @@ function onCreatePromise(e) {
   let step = Number(refs.step.value);
   let amount = Number(refs.amount.value);
 
-  for (let i = 0; i < amount; i++) {
-    if (valueDelay < 0 || step < 0 || amount <= 0) {
-      Notify.failure('❌ Enter positive numbers');
-      return;
-    } else {
+  if (valueDelay < 0 || step < 0 || amount <= 0) {
+    Notify.failure('❌ Enter positive numbers');
+    return;
+  } else {
+    for (let i = 0; i < amount; i += 1) {
       createPromise(1 + i, valueDelay + i * step)
         .then(({ position, delay }) => {
           Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
