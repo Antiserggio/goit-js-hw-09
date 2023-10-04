@@ -7,9 +7,12 @@ body {
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #fafafa;
+  background-color: linear-gradient(to bottom, #eae9e6, #5d5c5c 80%) fixed;
   color: #212121;
   line-height: 1.5;
+
+
+
 }
 
 img {
@@ -17,9 +20,6 @@ img {
   max-width: 100%;
 }
 
-body {
-  background: linear-gradient(to bottom, #eae9e6, #5d5c5c 80%) fixed;
-}
 
 #datetime-picker {
   box-sizing: border-box;
